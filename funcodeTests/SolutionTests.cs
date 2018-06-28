@@ -13,10 +13,10 @@ namespace funcode.Tests
     {
 
         private Solution Solution = null;
-
-        public void init()
+        [TestInitialize]
+        public void Init()
         {
-            Solution = new Solution();
+            this.Solution = new Solution();
         }
 
         [TestMethod()]
@@ -24,7 +24,26 @@ namespace funcode.Tests
         {
 
 
+
+
             Assert.Fail();
+        }
+
+
+
+        [TestMethod()]
+        public void RESTTest()
+        {
+
+            Assert.AreEqual<string>(
+              this.Solution.REST("aacecaaa"),
+              "aaacecaaa");
+
+
+            Assert.AreEqual<string>(
+          this.Solution.REST("A"),
+          "A");
+            //Assert.Fail();
         }
     }
 }

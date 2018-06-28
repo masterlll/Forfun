@@ -14,5 +14,18 @@ namespace funcode
 
             return null;
         }
+
+
+        public string REST(string INPO )
+        {
+
+
+            INPO = "A";
+            return INPO;
+
+        }
+
+
+
     }
-}
+}  
