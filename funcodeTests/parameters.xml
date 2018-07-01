@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<tests>
+  <add>
+    <given>A</given>
+    <expected>A</expected>
+  </add>
+  <add>
+    <given>A</given>
+    <expected>A</expected>
+  </add>
+  <add>
+    <given>A</given>
+    <expected>A</expected>
+  </add>
+</tests>

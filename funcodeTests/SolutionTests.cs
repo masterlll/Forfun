@@ -5,12 +5,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+using System.Windows.Input;
+
+
+
+
+
 
 namespace funcode.Tests
 {
     [TestClass()]
     public class SolutionTests
     {
+
+        private TestContext testContextInstance;
+        public TestContext TestContext
+        {
+            get { return testContextInstance; }
+            set { testContextInstance = value; }
+        }
 
         private Solution Solution = null;
         [TestInitialize]
@@ -32,17 +46,37 @@ namespace funcode.Tests
 
 
         [TestMethod()]
+     
+      //Datasource 使用外部檔案 傳入參數
+        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.XML", @"D:\Work\DoNET\Forfun\funcodeTests\parameters.xml", "add", DataAccessMethod.Sequential)]
         public void RESTTest()
         {
 
+           
+            string given = this.TestContext.DataRow["given"] as string;
+            string expected = this.TestContext.DataRow["expected"] as string;
+            string actual = this.Solution.REST(given);
+
+            this.TestContext.WriteLine($"given:    {given}");
+            this.TestContext.WriteLine($"expected: {expected}");
+            this.TestContext.WriteLine($"actual:   {actual}");
+
             Assert.AreEqual<string>(
-              this.Solution.REST("aacecaaa"),
-              "aaacecaaa");
+                actual,
+                expected);
+
+            //一般寫法
+          //  Assert.AreEqual<string>(
+          //    this.Solution.REST("aacecaaa"),
+          //    "aaacecaaa");
 
 
-            Assert.AreEqual<string>(
-          this.Solution.REST("A"),
-          "A");
+          //  Assert.AreEqual<string>(
+          //this.Solution.REST("A"),
+          //"A");
+
+
+
             //Assert.Fail();
         }
     }
