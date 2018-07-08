@@ -7,11 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using System.Windows.Input;
-
-
-
-
-
+using System.Diagnostics;
 
 namespace funcode.Tests
 {
@@ -44,7 +40,6 @@ namespace funcode.Tests
         }
 
 
-
         [TestMethod()]
      
       //Datasource 使用外部檔案 傳入參數
@@ -65,19 +60,33 @@ namespace funcode.Tests
                 actual,
                 expected);
 
-            //一般寫法
-          //  Assert.AreEqual<string>(
-          //    this.Solution.REST("aacecaaa"),
-          //    "aaacecaaa");
+            Con();
+            //一般單元測試寫法
+            //  Assert.AreEqual<string>(
+            //    this.Solution.REST("aacecaaa"),
+            //    "aaacecaaa");
 
 
-          //  Assert.AreEqual<string>(
-          //this.Solution.REST("A"),
-          //"A");
+            //  Assert.AreEqual<string>(
+            //this.Solution.REST("A"),
+            //"A");
 
 
 
             //Assert.Fail();
         }
+
+        [Conditional("DEBUG")]
+        public void Con()
+        {
+
+            Console.Write("D");
+            Console.WriteLine();
+        }
+
+#if (LOCAL_DEBUG)
+        
+#endif
+
     }
 }
