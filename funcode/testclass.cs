@@ -8,15 +8,33 @@ namespace funcode
 {
     public class Solution
     {
-        public int[] TwoSum(int[] nums, int target)
+
+        //Given nums = [2, 7, 11, 15], target = 9,
+
+        //Because nums[0] + nums[1] = 2 + 7 = 9,
+        //return [0, 1].
+        public int TwoSum(int[] nums, int target)
         {
+            int[] a = new int[2];
+            
+            for (int i = 0; i <= nums.Length; i++)
+            {
+                for (int b = 0; i <= nums.Length; b++)
+                {
 
+                    if (nums[i] + nums[b] == target)
+                     a[0] = nums[i];
+                     a[1] = nums[b];
 
-            return null;
+                        return 9;
+                }
+            }
+
+            return 0;
         }
 
 
-        public string REST(string INPO )
+        public string REST(string INPO)
         {
 
 
@@ -28,4 +46,4 @@ namespace funcode
 
 
     }
-}  
+}       

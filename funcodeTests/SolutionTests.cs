@@ -32,11 +32,14 @@ namespace funcode.Tests
         [TestMethod()]
         public void TwoSumTest()
         {
+            int[] a = new int[4] { 2,7,11,15};
+            int[] b = new int[2];
+
+            Assert.AreEqual<int>(this.Solution.TwoSum(a, 9), 9);
 
 
 
-
-            Assert.Fail();
+            //Assert.Fail();
         }
 
 
@@ -76,7 +79,7 @@ namespace funcode.Tests
             //Assert.Fail();
         }
 
-        [Conditional("DEBUG")]
+       // [Conditional("DEBUG")]
         public void Con()
         {
 
