@@ -17,16 +17,18 @@ namespace funcode
         {
             int[] a = new int[2];
             
-            for (int i = 0; i <= nums.Length; i++)
-            {
-                for (int b = 0; i <= nums.Length; b++)
+            for (int i = 0; i <=nums.Length-1; i++)
+             {                                              
+                for (int b = 0; b <= nums.Length-1; b++)
                 {
-
+                                            
                     if (nums[i] + nums[b] == target)
-                     a[0] = nums[i];
-                     a[1] = nums[b];
-
+                    {
+                        a[0] = nums[i];
+                        a[1] = nums[b];
                         return 9;
+
+                    }
                 }
             }
 

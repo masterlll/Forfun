@@ -32,10 +32,10 @@ namespace funcode.Tests
         [TestMethod()]
         public void TwoSumTest()
         {
-            int[] a = new int[4] { 2,7,11,15};
+            int[] a = new int[2] {27,1115};
             int[] b = new int[2];
-
-            Assert.AreEqual<int>(this.Solution.TwoSum(a, 9), 9);
+            
+            Assert.AreEqual<int>(this.Solution.TwoSum(a, 9), 0);
 
 
 
