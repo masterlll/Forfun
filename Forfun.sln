@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "funcode", "funcode\funcode.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "funcodeTests", "funcodeTests\funcodeTests.csproj", "{486C0A22-97ED-4CF5-9582-C24EA0937307}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Winform_FunCode", "Winform_FunCode\Winform_FunCode.csproj", "{A104D364-D40D-4C38-B7D8-472DE3913A18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{486C0A22-97ED-4CF5-9582-C24EA0937307}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{486C0A22-97ED-4CF5-9582-C24EA0937307}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{486C0A22-97ED-4CF5-9582-C24EA0937307}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A104D364-D40D-4C38-B7D8-472DE3913A18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A104D364-D40D-4C38-B7D8-472DE3913A18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A104D364-D40D-4C38-B7D8-472DE3913A18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A104D364-D40D-4C38-B7D8-472DE3913A18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
